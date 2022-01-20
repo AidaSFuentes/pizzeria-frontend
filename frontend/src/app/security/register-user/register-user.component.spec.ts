@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegisterUserComponent } from './register-user.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
@@ -31,4 +31,4 @@ describe('RegisterUserComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+});*/

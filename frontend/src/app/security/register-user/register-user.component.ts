@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { User, RegisterUserDAO, LoginService } from '../security.service';
 import { Router } from '@angular/router';
@@ -138,3 +138,4 @@ export class RegisterUserComponent implements OnInit {
     );
   }
 }
+*/

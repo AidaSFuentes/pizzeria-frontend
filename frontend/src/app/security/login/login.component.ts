@@ -1,3 +1,4 @@
+/*
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../security.service';
 import { Router } from '@angular/router';
@@ -45,3 +46,4 @@ export class LoginComponent implements OnInit {
     this.txtButon = this.loginSrv.isAutenticated ? 'Log Out' : 'Log In';
   }
 }
+*/
