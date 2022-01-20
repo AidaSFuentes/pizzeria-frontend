@@ -9,6 +9,8 @@ import { CartaModule } from './carta/carta.module';
 import { MainModule } from './main/main.module';
 import { SecurityModule } from './security';
 import { ShowErrorsMessagesComponent } from './common.component/show-errors-messages/show-errors-messages.component';
+import { IngredienteModule } from './ingredientes';
+import { PizzasModule } from './pizzas/pizzas.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,7 @@ import { ShowErrorsMessagesComponent } from './common.component/show-errors-mess
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
-    AppRoutingModule, CartaModule, MainModule, SecurityModule,
+    AppRoutingModule, CartaModule, MainModule, SecurityModule, IngredienteModule, PizzasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
