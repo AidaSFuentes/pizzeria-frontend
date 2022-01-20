@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartaComponent } from './carta/carta.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { PedidoComponent} from './pedidos/pedido/pedido.component';
+import { UsuarioModule } from './usuarios';
 
 const routes: Routes = [
-  {path: '', component: CartaComponent},
-  { path: 'ingredientes', loadChildren: () => import('./ingredientes/ingredientes.module').then(mod => mod.IngredientesModule)},
-  { path: 'pizzas', loadChildren: () => import('./pizzas/pizzas.module').then(mod => mod.PizzasModule)},
-  { path: 'usuarios', loadChildren: () => import('./usuarios/usuarios.module').then(mod => mod.UsuariosModule)},
-  { path: 'pedidos', loadChildren: () => import('./pedidos/pedidos.module').then(mod => mod.PedidosModule)},
+  { path: '', component: CatalogoComponent, pathMatch: 'full'},
+  { path: 'pedido', component: PedidoComponent, pathMatch: 'full'},
+  { path: 'pedido/:id', component: PedidoComponent, pathMatch: 'full'},
+  { path: 'pizzas', loadChildren: () => import('./pizzas/pizza.module').then(mod => mod.PizzaModule)},
+  { path: 'ingredientes', loadChildren: () => import('./ingredientes/ingrediente.module').then(mod => mod.IngredienteModule)},
+  { path: 'usuarios', loadChildren: () => import ('./usuarios/usuarios.module').then(mod => UsuarioModule)},
+
+
+// ingrediente, compra, usuarios
 ];
 
 @NgModule({
