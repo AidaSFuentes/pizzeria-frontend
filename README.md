@@ -1,8 +1,10 @@
-# Proyecto Final Bootcamp 2022 Capgemini
+# Proyecto Final Bootcamp 2022 
 
 ## Autores
 
-- Fernando Barroso.
-- Alejandro Checa.
 - Aida Sanchez Fuentes.
+- Alejandro Checa.
+- Fernando Barroso.
+
+
 
