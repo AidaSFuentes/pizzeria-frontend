@@ -1,12 +1,25 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { PizzaComponent } from './pizza.component';
 
+describe('PizzaComponent', () => {
+  let component: PizzaComponent;
+  let fixture: ComponentFixture<PizzaComponent>;
 
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
-export class PizzasModule { }
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ PizzaComponent ]
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(PizzaComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
