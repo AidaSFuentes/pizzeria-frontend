@@ -14,6 +14,12 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     HomeComponent
   ],
+  exports: [
+    HeaderComponent,
+    NavbarComponent,
+    FooterComponent,
+    HomeComponent
+  ],
   imports: [
     CommonModule
   ]
