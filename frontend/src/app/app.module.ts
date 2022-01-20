@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { CartaModule } from './carta/carta.module';
 import { MainModule } from './main/main.module';
 import { SecurityModule } from './security';
+import { ShowErrorsMessagesComponent } from './common.component/show-errors-messages/show-errors-messages.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowErrorsMessagesComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
