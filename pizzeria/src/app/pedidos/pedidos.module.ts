@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LibModule } from 'src/lib/lib.module';
-import { IngredientesModule } from '../ingredientes/ingredientes.module';
+import { BrowserModule } from '@angular/platform-browser';
 
-
-
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [],
