@@ -1,0 +1,8 @@
+[
+    {"id": 1, "nombre": "base fina", "tipo": "base", "precio": 1.00 },
+    {"id": 2, "nombre": "tomate", "tipo": "salsa", "precio": 1.00 },
+    {"id": 3, "nombre": "queso", "tipo": "normal", "precio": 1.00 },
+    {"id": 4, "nombre": "ternera", "tipo": "normal", "precio": 2.00 },
+    {"id": 5, "nombre": "pollo", "tipo": "normal", "precio": 2.00 },
+    {"id": 6, "nombre": "pepperoni", "tipo": "normal", "precio": 1.20 }
+]
