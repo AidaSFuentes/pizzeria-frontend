@@ -15,7 +15,7 @@ export class NavigationService {
         if (ev.snapshot?.data?.['pageTitle']) {
           this.title.setTitle(ev.snapshot.data['pageTitle']);
         } else {
-          this.title.setTitle('Curso de Angular');
+          this.title.setTitle('Final Project');
         }
       }
       if (e instanceof NavigationEnd) {
