@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { IngredientComponent } from './ingrediente/ingrediente.component';
+import { IngredienteComponent } from './ingrediente/ingrediente.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: IngredientComponent },
+  { path: '', pathMatch: 'full', component: IngredienteComponent },
 ];
 
 @NgModule({
@@ -13,4 +13,4 @@ const routes: Routes = [
     CommonModule, RouterModule.forChild(routes),
   ]
 })
-export class IngredientModule { }
+export class IngredienteModule { }
