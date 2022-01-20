@@ -1,0 +1,36 @@
+nav {
+  width: 100%;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--backgroundNavbar);
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  transition: 0.3s;
+}
+
+li input, li button {
+  margin-top: 23px;
+  display: block;
+  text-align: center;
+}
+
+.active {
+  background-color: var(--navbar);
+}
+.active:hover {
+  background-color: #b60015;
+}
