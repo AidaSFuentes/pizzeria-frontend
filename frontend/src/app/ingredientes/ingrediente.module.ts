@@ -6,7 +6,7 @@ import { CommonServicesModule } from '../common-services';
 import { IngredientesAddComponent, IngredientesComponent, IngredientesEditComponent, IngredientesListComponent, IngredientesViewComponent } from './componente.component';
 import { AuthGuard, SecurityModule } from '../security';
 import { FormsModule } from '@angular/forms';
-import { INGREDIENTES_COMPONENTES } from '.';
+import { INGREDIENTES_COMPONENTES } from './componente.component';
 
 const routes: Routes = [
   { path: '', component: IngredientesListComponent},

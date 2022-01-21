@@ -1,0 +1,18 @@
+<h1>Mis Ingredientes</h1>
+<form #miForm="ngForm">
+  <div class="form-group">
+    <input
+      type="button"
+      class="btn btn-success"
+      value="Enviar"
+      (click)="VM.send()"
+      [disabled]="miForm.invalid"
+    />
+    <input
+      type="button"
+      class="btn btn-info"
+      value="Volver"
+      (click)="VM.cancel()"
+    />
+  </div>
+</form>

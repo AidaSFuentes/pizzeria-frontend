@@ -1,2 +1,3 @@
-export * from './pizza.module'
-export *from './pizza/pizza.component'
+export * from './pizza.module';
+export * from './componente.component';
+export * from './servicios.service';

@@ -11,6 +11,7 @@ import { CommonComponentsModule } from './common.component';
 import { IngredienteModule } from './ingredientes/ingrediente.module';
 import { MainModule } from './main/main.module';
 import { PedidoModule } from './pedidos/pedido.module';
+import { PizzaModule } from './pizzas';
 import { SecurityModule } from './security';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { SecurityModule } from './security';
     CatalogoModule,
     PedidoModule,
     MyCoreModule,
+
   ],
   providers: [
     LoggerService,

@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PizzaComponent } from './pizza/pizza.component';
+import { CommonServicesModule } from 'src/app/common-services';
+import { FormsModule } from '@angular/forms';
+import { MyCoreModule } from 'src/lib/my-core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard, SecurityModule } from 'src/app/security';
+import { PizzasListComponent, PizzasAddComponent, PizzasEditComponent, PizzasViewComponent, PIZZAS_COMPONENTES } from './componente.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: PizzaComponent },
+  { path: '', component: PizzasListComponent},
+  { path: '/add', component: PizzasAddComponent, canActivate: [ AuthGuard ]},
+  { path: '/:id/edit', component: PizzasEditComponent},
+  { path: '/:id', component: PizzasViewComponent},
 ];
 
 @NgModule({
-  declarations: [ PizzaComponent ],
+  declarations: [
+    PIZZAS_COMPONENTES,
+  ],
   imports: [
-    CommonModule, RouterModule.forChild(routes),
+    CommonServicesModule, FormsModule, MyCoreModule, SecurityModule, CommonModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class PizzaModule { }
