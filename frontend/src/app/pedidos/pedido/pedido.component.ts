@@ -6,14 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pedido.component.css']
 })
 export class PedidoComponent implements OnInit {
-
+/*
   elemento: PedidoComponent = new PedidoComponent();
   listado: Array<PedidoComponent> = [];
 
   isAdd: boolean = true;
 
-  constructor() { }
-
+  constructor(protected vm: PedidosViewModelService) { }
+  public get VM():PedidosViewModelService{return this.vm;}
+*/
   ngOnInit(): void {
   }
 /*

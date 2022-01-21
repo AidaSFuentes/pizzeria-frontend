@@ -4,6 +4,7 @@ import { PedidoComponent} from './pedido/pedido.component';
 
 
 
+
 @NgModule({
   declarations: [
     PedidoComponent,
