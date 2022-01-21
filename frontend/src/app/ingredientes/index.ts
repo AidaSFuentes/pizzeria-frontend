@@ -1,2 +1,3 @@
-export * from './ingrediente.module';
-export * from './ingrediente/ingrediente.component';
+export * from './modulo.module'
+export * from './componente.component'
+
