@@ -13,16 +13,23 @@ import { MainModule } from './main/main.module';
 import { PedidoModule } from './pedidos/pedido.module';
 import { SecurityModule } from './security';
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
-   HttpClientModule, FormsModule, BrowserModule, AppRoutingModule, MainModule, CommonComponentsModule,
-   CommonServicesModule, SecurityModule, CatalogoModule, PedidoModule, MyCoreModule, IngredienteModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    MainModule,
+    CommonComponentsModule,
+    CommonServicesModule,
+    SecurityModule,
+    CatalogoModule,
+    PedidoModule,
+    MyCoreModule,
+    IngredienteModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
