@@ -29,8 +29,5 @@ li input, li button {
 }
 
 .active {
-  background-color: var(--navbar);
-}
-.active:hover {
-  background-color: #b60015;
+  background-color: var(--navbarActive);
 }
