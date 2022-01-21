@@ -5,6 +5,8 @@ import { MyCoreModule } from 'src/lib/my-core';
 import { CommonServicesModule } from '../common-services';
 import { IngredientesAddComponent, IngredientesComponent, IngredientesEditComponent, IngredientesListComponent, IngredientesViewComponent } from './componente.component';
 import { AuthGuard, SecurityModule } from '../security';
+import { FormsModule } from '@angular/forms';
+import { INGREDIENTES_COMPONENTES } from '.';
 
 const routes: Routes = [
   { path: '', component: IngredientesListComponent},
@@ -14,9 +16,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    INGREDIENTES_COMPONENTES
+  ],
   imports: [
-    CommonModule, RouterModule.forChild(routes),
+    CommonModule, FormsModule, RouterModule.forChild(routes),
     MyCoreModule, CommonServicesModule, SecurityModule
   ]
 })

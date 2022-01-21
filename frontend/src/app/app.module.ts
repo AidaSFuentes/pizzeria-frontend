@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MyCoreModule } from 'src/lib/my-core';
+import { LoggerService, MyCoreModule } from 'src/lib/my-core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogoModule } from './catalogo/catalogo.module';
@@ -27,9 +27,10 @@ import { SecurityModule } from './security';
     CatalogoModule,
     PedidoModule,
     MyCoreModule,
-    IngredienteModule,
   ],
-  providers: [],
+  providers: [
+    LoggerService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

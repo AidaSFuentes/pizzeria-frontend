@@ -1,3 +1,3 @@
-export * from './modulo.module'
+export * from './ingrediente.module'
 export * from './componente.component'
 
