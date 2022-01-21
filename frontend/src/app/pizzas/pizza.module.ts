@@ -6,11 +6,13 @@ import { MyCoreModule } from 'src/lib/my-core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard, SecurityModule } from 'src/app/security';
 import { PizzasListComponent, PizzasAddComponent, PizzasEditComponent, PizzasViewComponent, PIZZAS_COMPONENTES } from './componente.component';
+import { PizzasComponent } from '.';
 
 
 const routes: Routes = [
   { path: '', component: PizzasListComponent},
-  { path: '/add', component: PizzasAddComponent, canActivate: [ AuthGuard ]},
+  { path: '', component: PizzasComponent},
+  { path: '/add', component: PizzasAddComponent},
   { path: '/:id/edit', component: PizzasEditComponent},
   { path: '/:id', component: PizzasViewComponent},
 ];

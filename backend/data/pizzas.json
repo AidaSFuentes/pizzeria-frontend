@@ -1,0 +1,14 @@
+[
+    {"id": 1, "nombre": "margarita", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 12.85 },
+    {"id": 2, "nombre": "hawaiana", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 12.00 },
+    {"id": 3, "nombre": "stravaganza", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 13.50 },
+    {"id": 4, "nombre": "mediterranea", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 11.00 },
+    {"id": 5, "nombre": "cuatro quesos", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 10.00 },
+    {"id": 6, "nombre": "cuatro estaciones", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 12.20 },
+    {"id": 7, "nombre": "vegetariana", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 12.00 },
+    {"id": 8, "nombre": "diavola", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 13.20 },
+    {"id": 9, "nombre": "frutti di mare", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 14.20 },
+    {"id": 10, "nombre": "barbacoa", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 13.20 },
+    {"id": 11, "nombre": "cabonara", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 13.20 },
+    {"id": 12, "nombre": "Prosciutto e funghi", "base": 1, "salsa": 2, "ingredientes": [3, 4], "imgUrl": "/files/barbacoa.png", "precio": 14.20 }
+]

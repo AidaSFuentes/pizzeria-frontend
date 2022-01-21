@@ -10,6 +10,7 @@ import { INGREDIENTES_COMPONENTES } from './componente.component';
 
 const routes: Routes = [
   { path: '', component: IngredientesListComponent},
+  { path: '', component: IngredientesComponent},
   { path: '/add', component: IngredientesAddComponent, canActivate: [ AuthGuard ]},
   { path: '/:id/edit', component: IngredientesEditComponent},
   { path: '/:id', component: IngredientesViewComponent},
