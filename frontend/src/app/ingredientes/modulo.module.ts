@@ -19,4 +19,4 @@ import { INGREDIENTES_COMPONENTES } from './componente.component';
     [ INGREDIENTES_COMPONENTES ]
   ],
 })
-export class IngredientesModule { }
+export class IngredienteModule { }
