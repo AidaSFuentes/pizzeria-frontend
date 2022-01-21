@@ -23,7 +23,9 @@ import { IngredientesViewModelService } from './servicios.service';
  export class IngredientesListComponent implements OnInit {
   constructor(protected vm: IngredientesViewModelService) { }
   public get VM(): IngredientesViewModelService { return this.vm; }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.vm.list();
+  }
  }
  @Component({
   selector: 'app-ingredientes-add',

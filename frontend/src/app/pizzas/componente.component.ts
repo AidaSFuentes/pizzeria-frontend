@@ -23,7 +23,9 @@ import { PizzasViewModelService } from './servicios.service';
  export class PizzasListComponent implements OnInit {
   constructor(protected vm: PizzasViewModelService) { }
   public get VM(): PizzasViewModelService { return this.vm; }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.vm.list();
+  }
  }
  @Component({
   selector: 'app-pizzas-add',
