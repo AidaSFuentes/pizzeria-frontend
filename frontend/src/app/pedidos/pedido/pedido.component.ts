@@ -16,11 +16,11 @@ export class PedidoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/*
   add(): void {
     this.elemento = new PedidoComponent();
     this.isAdd = true;
   }
+*/
 
-  
 }
