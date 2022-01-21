@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidoComponent implements OnInit {
 
+  elemento: PedidoComponent = new PedidoComponent();
+  listado: Array<PedidoComponent> = [];
+
+  isAdd: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  add(): void {
+    this.elemento = new PedidoComponent();
+    this.isAdd = true;
+  }
+
+  
 }

@@ -51,6 +51,12 @@ const lstServicio = [{
   readonly: false
 },
 {
+  url: DIR_API_REST + 'pedidos',
+  pk: 'id',
+  fich: __dirname + '/data/pedidos.json',
+  readonly: false
+},
+{
   url: DIR_API_REST + 'usuarios',
   pk: 'id',
   fich: __dirname + '/data/usuarios.json',
