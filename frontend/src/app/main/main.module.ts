@@ -3,23 +3,22 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { SliderComponent } from './slider/slider.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    SliderComponent,
   ],
   exports: [
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    SliderComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([]),
   ]
 })
 export class MainModule { }
