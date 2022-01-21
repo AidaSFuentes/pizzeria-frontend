@@ -26,7 +26,7 @@ const routes: Routes = [
       import('./usuarios/usuarios.module').then((mod) => UsuarioModule),
   },
 
-  // ingrediente, compra, usuarios
+  // ingrediente, compra(pedidos), usuarios
 ];
 
 @NgModule({
