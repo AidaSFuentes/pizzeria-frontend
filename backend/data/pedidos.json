@@ -1,18 +1,13 @@
 [
-    {
-        "id": 1, "direccion": "a", "importe": 2.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 1, "cantidad": 2},{"idPizza": 2, "cantidad": 1}]
+    {"id": 1, "direccion": "a", "importe": 2.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 1, "cantidad": 2},{"idPizza": 2, "cantidad": 1}]
     },
-    {
-        "id": 2, "direccion": "b", "importe": 20.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 1, "cantidad": 1}]
+    {"id": 2, "direccion": "b", "importe": 20.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 1, "cantidad": 1}]
     },
-    {
-        "id": 3, "direccion": "c", "importe": 15.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 2, "cantidad": 1}]
+    {"id": 3, "direccion": "c", "importe": 15.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 2, "cantidad": 1}]
     },
-    {
-        "id": 4, "direccion": "d", "importe": 7.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 3, "cantidad": 2},{"idPizza": 1, "cantidad": 1}]
+    {"id": 4, "direccion": "d", "importe": 7.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 3, "cantidad": 2},{"idPizza": 1, "cantidad": 1}]
     },
-    {
-        "id": 5, "direccion": "e", "importe": 5.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 1, "cantidad": 2},{"idPizza": 2, "cantidad": 1}]
+    {"id": 5, "direccion": "e", "importe": 5.00 ,"estado": "elaborandose", "lineas": [{"idPizza": 1, "cantidad": 2},{"idPizza": 2, "cantidad": 1}]
     }
 
 ]
