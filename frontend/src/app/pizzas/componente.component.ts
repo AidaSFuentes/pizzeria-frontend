@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { PizzasViewModelService } from './servicios.service';
 
 @Component({
@@ -13,6 +14,9 @@ export class PizzasComponent implements OnInit {
   }
   ngOnInit(): void {
     this.vm.list();
+  }
+  ngOnDestroy(): void {
+    this.vm.clear();
   }
 }
 
@@ -41,7 +45,9 @@ export class PizzasAddComponent implements OnInit {
   public get VM(): PizzasViewModelService {
     return this.vm;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.VM.add();
+  }
 }
 
 @Component({
@@ -50,12 +56,28 @@ export class PizzasAddComponent implements OnInit {
   styleUrls: ['./componente.component.css'],
 })
 export class PizzasEditComponent implements OnInit, OnDestroy {
-  constructor(protected vm: PizzasViewModelService) {}
+  private obs$: any;
+  constructor(
+    protected vm: PizzasViewModelService,
+    protected route: ActivatedRoute,
+    protected router: Router
+  ) {}
   public get VM(): PizzasViewModelService {
     return this.vm;
   }
-  ngOnInit(): void {}
-  ngOnDestroy(): void {}
+  ngOnInit(): void {
+    this.obs$ = this.route.paramMap.subscribe((params: ParamMap) => {
+      const id = parseInt(params?.get('id') ?? '');
+      if (id) {
+        this.vm.edit(id);
+      } else {
+        this.router.navigate(['/404.html']);
+      }
+    });
+  }
+  ngOnDestroy(): void {
+    this.obs$.unsubscribe();
+  }
 }
 
 @Component({
@@ -64,13 +86,30 @@ export class PizzasEditComponent implements OnInit, OnDestroy {
   styleUrls: ['./componente.component.css'],
 })
 export class PizzasViewComponent implements OnInit, OnDestroy {
-  constructor(protected vm: PizzasViewModelService) {}
+  private obs$: any;
+  constructor(
+    protected vm: PizzasViewModelService,
+    protected route: ActivatedRoute,
+    protected router: Router
+  ) {}
   public get VM(): PizzasViewModelService {
     return this.vm;
   }
-  ngOnInit(): void {}
-  ngOnDestroy(): void {}
+  ngOnInit(): void {
+    this.obs$ = this.route.paramMap.subscribe((params: ParamMap) => {
+      const id = parseInt(params?.get('id') ?? '');
+      if (id) {
+        this.vm.view(id);
+      } else {
+        this.router.navigate(['/404.html']);
+      }
+    });
+  }
+  ngOnDestroy(): void {
+    this.obs$.unsubscribe();
+  }
 }
+
 export const PIZZAS_COMPONENTES = [
   PizzasComponent,
   PizzasAddComponent,
