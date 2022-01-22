@@ -1,14 +1,20 @@
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { LoggerService } from 'src/lib/my-core';
-import { NotificationService } from '../common-services';
+import { NavigationService, NotificationService } from '../common-services';
+import { AuthService } from '../security';
 import { ModoCRUD } from './tipos';
 
 export abstract class RESTDAOServiceBase<T, K> {
   protected baseUrl = environment.apiURL;
 
-  constructor(protected http: HttpClient, entidad: string, protected option = {}) {
+  constructor(
+    protected http: HttpClient,
+    entidad: string,
+    protected option = {}
+  ) {
     this.baseUrl += entidad;
   }
   query(): Observable<Array<T>> {
@@ -37,7 +43,10 @@ export abstract class ViewModelServiceBase<T, K> {
   constructor(
     protected notify: NotificationService,
     protected out: LoggerService,
-    protected dao: RESTDAOServiceBase<T, K>
+    protected dao: RESTDAOServiceBase<T, K>,
+    public auth: AuthService,
+    protected router: Router,
+    private navigation: NavigationService,
   ) {}
 
   public get Modo(): ModoCRUD {
@@ -48,6 +57,9 @@ export abstract class ViewModelServiceBase<T, K> {
   }
   public get Elemento(): T | null {
     return this.elemento;
+  }
+  public get isAutenticated(): boolean {
+    return this.auth.isAutenticated;
   }
 
   public list(): void {
@@ -105,7 +117,8 @@ export abstract class ViewModelServiceBase<T, K> {
   public cancel(): void {
     this.elemento = null;
     this.idOriginal = null;
-    this.list();
+    // this.list();
+    this.navigation.back();
   }
 
   public send(): void {
