@@ -12,9 +12,9 @@ import { PizzasComponent } from '.';
 const routes: Routes = [
   { path: '', component: PizzasListComponent},
   { path: '', component: PizzasComponent},
-  { path: '/add', component: PizzasAddComponent},
-  { path: '/:id/edit', component: PizzasEditComponent},
-  { path: '/:id', component: PizzasViewComponent},
+  { path: 'add', component: PizzasAddComponent},
+  { path: ':id/edit', component: PizzasEditComponent},
+  { path: ':id', component: PizzasViewComponent},
 ];
 
 @NgModule({
