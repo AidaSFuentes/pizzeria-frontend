@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PedidoComponent } from './pedido.component';
 
 describe('PedidoComponent', () => {

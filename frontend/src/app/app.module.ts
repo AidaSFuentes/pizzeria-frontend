@@ -28,11 +28,8 @@ import { SecurityModule } from './security';
     CatalogoModule,
     PedidoModule,
     MyCoreModule,
-
   ],
-  providers: [
-    LoggerService,
-  ],
+  providers: [LoggerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "nombre": "margarita",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 12.85
+  },
+  {
+    "id": 2,
+    "nombre": "hawaiana",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 12.0
+  },
+  {
+    "id": 3,
+    "nombre": "stravaganza",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 13.5
+  },
+  {
+    "id": 4,
+    "nombre": "mediterranea",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 11.0
+  },
+  {
+    "id": 5,
+    "nombre": "cuatro quesos",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 10.0
+  },
+  {
+    "id": 6,
+    "nombre": "cuatro estaciones",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 12.2
+  },
+  {
+    "id": 7,
+    "nombre": "vegetariana",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 12.0
+  },
+  {
+    "id": 8,
+    "nombre": "diavola",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 13.2
+  },
+  {
+    "id": 9,
+    "nombre": "frutti di mare",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 14.2
+  },
+  {
+    "id": 10,
+    "nombre": "barbacoa",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 13.2
+  },
+  {
+    "id": 11,
+    "nombre": "cabonara",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 13.2
+  },
+  {
+    "id": 12,
+    "nombre": "Prosciutto e funghi",
+    "ingredientes": [1, 2, 3, 4],
+    "imgUrl": "http://localhost:4321/files/barbacoa.png",
+    "precio": 14.2
+  }
+]

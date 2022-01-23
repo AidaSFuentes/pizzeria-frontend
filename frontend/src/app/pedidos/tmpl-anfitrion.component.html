@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="VM.Modo" >
+  <app-pedido-add *ngSwitchCase="'add'"></app-pedido-add>
+  <app-pedido-edit *ngSwitchCase="'edit'"></app-pedido-edit>
+  <app-pedido-view *ngSwitchCase="'view'"></app-pedido-view>
+  <app-pedido-list *ngSwitchDefault></app-pedido-list>
+</ng-container>
