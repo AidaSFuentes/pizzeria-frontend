@@ -1,4 +1,4 @@
-<h1>Pizzas {{ VM.Elemento?.nombre }}</h1>
+<h1>Pizza {{ VM.Elemento?.nombre }}</h1>
 <img
   class="rounded-circle float-left"
   src="{{ VM.Elemento?.imgUrl }}"
@@ -6,6 +6,8 @@
   width="300"
   height="300"
 />
+<p>ingredientes: {{ VM.Elemento?.ingredientes }}</p>
+<p>precio: {{ VM.Elemento?.precio }}€</p>
 <div class="row">
   <input
     class="btn btn-secondary"
