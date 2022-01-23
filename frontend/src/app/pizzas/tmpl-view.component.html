@@ -1,9 +1,16 @@
-<h1>Pizzas {{VM.Elemento?.nombre}}</h1>
+<h1>Pizzas {{ VM.Elemento?.nombre }}</h1>
+<img
+  class="rounded-circle float-left"
+  src="{{ VM.Elemento?.imgUrl }}"
+  alt="Foto de {{ VM.Elemento?.nombre }}"
+  width="300"
+  height="300"
+/>
 <div class="row">
-            <input
-              class="btn btn-secondary"
-              type="button"
-              value="Volver"
-              (click)="VM.cancel()"
-            />
+  <input
+    class="btn btn-secondary"
+    type="button"
+    value="Volver"
+    (click)="VM.cancel()"
+  />
 </div>
