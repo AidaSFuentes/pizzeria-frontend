@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { IngredientesViewModelService } from './servicios.service';
+import { Ingrediente, IngredientesViewModelService } from './servicios.service';
 
 @Component({
   selector: 'app-ingredientes',
