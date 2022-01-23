@@ -46,7 +46,7 @@ export abstract class ViewModelServiceBase<T, K> {
     protected dao: RESTDAOServiceBase<T, K>,
     public auth: AuthService,
     protected router: Router,
-    private navigation: NavigationService,
+    private navigation: NavigationService
   ) {}
 
   public get Modo(): ModoCRUD {
