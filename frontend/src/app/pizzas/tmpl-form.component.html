@@ -1,35 +1,30 @@
-<h1>Pizzas {{VM.Elemento?.nombre}}</h1>
+<h1>Pizzas {{ VM.Elemento?.nombre }}</h1>
 <form #miForm="ngForm">
-
   <p>
     Código:
 
-      <input type="number" id="id" name="id" min="1" required>
-      <!-- <output class="error" [hidden]="!id.hasError('required') || miForm.pristine">Es obligatorio</output> -->
+    <input type="number" id="id" name="id" min="1" required />
 
-
-    <br>
+    <br />
     Nombre:
-    <input type="text" id="nombre" name="nombre" notblank minlength="2" maxlength="30">
-    <!-- <output class="error" [show]="nombre.hasError('required')">Es obligatorio</output>
-    <output class="error" [show]="nombre.hasError('minlength') || nombre.hasError('maxlength')"> -->
-      Debe tener entre 2 y 30 letras
-    <!-- </output> -->
-    <!-- <app-show-errors-messages [errors]="nombre.errors"></app-show-errors-messages> -->
-    <!-- <output [myShowErrors]="nombre.errors"></output> -->
-    <br>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      notblank
+      minlength="2"
+      maxlength="30"
+    />
+
+    Debe tener entre 2 y 30 letras
+
+    <br />
     Ingredientes:
-    <input type="text" id="tipo" name="tipo" minlength="2" >
-    <!-- <output class="error" [hidden]="!tipo.hasError('minlength') && !tipo.hasError('maxlength')">
-      Debe tener entre 2 y 10 letras
-    </output> -->
-    <br>
+    <input type="text" id="tipo" name="tipo" minlength="2" />
+
+    <br />
     Precio:
-    <input type="number" id="precio" name="precio" min="5" >
-    <!-- <output class="error" [hidden]="!precio.hasError('min') && !precio.hasError('max')">
-
-    </output> -->
-
+    <input type="number" id="precio" name="precio" min="5" />
   </p>
 
   <div class="form-group">
