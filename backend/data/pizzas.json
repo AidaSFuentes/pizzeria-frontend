@@ -2,35 +2,35 @@
   {
     "id": 1,
     "nombre": "margarita",
-    "ingredientes": [1, 2, 3, 4],
+    "ingredientes":["queso", "tomate"],
     "imgUrl": "http://localhost:4321/files/barbacoa.png",
     "precio": 12.85
   },
   {
     "id": 2,
     "nombre": "hawaiana",
-    "ingredientes": [1, 2, 3, 4],
+    "ingredientes": ["piña","queso", "jamon york"],
     "imgUrl": "http://localhost:4321/files/barbacoa.png",
     "precio": 12.0
   },
   {
     "id": 3,
     "nombre": "stravaganza",
-    "ingredientes": [1, 2, 3, 4],
+    "ingredientes": ["tomate", "bacon", "alcachofas"],
     "imgUrl": "http://localhost:4321/files/barbacoa.png",
     "precio": 13.5
   },
   {
     "id": 4,
     "nombre": "mediterranea",
-    "ingredientes": [1, 2, 3, 4],
+    "ingredientes": ["alcachofas", "olivas negras", "queso","champiñones"],
     "imgUrl": "http://localhost:4321/files/barbacoa.png",
     "precio": 11.0
   },
   {
     "id": 5,
     "nombre": "cuatro quesos",
-    "ingredientes": [1, 2, 3, 4],
+    "ingredientes": ["roquefort", "camembert", "cabra", "grana padanno"],
     "imgUrl": "http://localhost:4321/files/barbacoa.png",
     "precio": 10.0
   },
