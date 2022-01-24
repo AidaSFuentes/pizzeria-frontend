@@ -8,24 +8,21 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of VM.Listado">
-      <td>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2">
-              <img class="rounded-circle float-left" src="{{item.imgUrl}}"
-                alt="Foto de {{item.nombre}}" width="75" height="75">
-            </div>
-            <div class="col-md-10">
-              <a class="btn btn-link btn-lg px-0" routerLink="{{item.id}}">
+    <div *ngFor="let item of VM.Listado" class="catalog-container">
+        <div >
+          <div >
+            <div class="pizza-container" >
+              <a  routerLink="/pizzas/{{item.id}}">
                 {{item.nombre}}</a>
-                <button class="btn btn-danger" (click)="carrito.add(item.id, item.precio, 1)"><i class="far fa-trash-alt"></i>Pedir</button>
-
+              <img  src="{{item.imgUrl}}"
+                alt="Foto de {{item.nombre}}" width="300" height="300">
+            </div>
+            <div >
+                <button (click)="carrito.add(item.id, item.precio, 1)"><i class="far fa-trash-alt"></i>Pedir</button>
             </div>
           </div>
         </div>
-      </td>
-    </tr>
+    </div>
   </tbody>
 </table>
 

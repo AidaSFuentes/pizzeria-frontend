@@ -1,7 +1,7 @@
 <h1>Pizza {{ VM.Elemento?.nombre }}</h1>
 <form #miForm="ngForm">
   <div>
-    <img
+    <img *ngIf="VM.Elemento?.imgUrl"
       class="rounded-circle float-left"
       src="{{ VM.Elemento?.imgUrl }}"
       alt="Foto de {{ VM.Elemento?.nombre }}"
