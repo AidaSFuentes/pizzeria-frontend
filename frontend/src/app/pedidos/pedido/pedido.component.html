@@ -1,5 +1,5 @@
 <h1>Pedido</h1>
-<form #miForm="ngForm">
+<form #miForm="ngForm" *ngIf="VM.carrito.HayCarrito">
   <div class="form-row">
     <div class="form-group col-md-4">
       <label class="form-label" for="nombre">Direccion:</label>
@@ -25,3 +25,6 @@
     <input type="button" class="btn btn-info" value="Volver" (click)="VM.cancel()">
   </div>
 </form>
+<div *ngIf="!VM.carrito.HayCarrito">
+  <h2>El carrito no tiene pizzas.</h2>
+</div>

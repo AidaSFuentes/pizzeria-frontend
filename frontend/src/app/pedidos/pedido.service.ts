@@ -35,7 +35,7 @@ export  class PedidosViewModelService {
   protected listURL = '/';
 
   constructor(protected notify: NotificationService, protected out: LoggerService, protected dao: PedidoDAOService,
-    public auth: AuthService, protected router: Router, private navigation: NavigationService, protected carrito: CarritoService) { }
+    public auth: AuthService, protected router: Router, private navigation: NavigationService, public carrito: CarritoService) { }
 
   public get Modo(): ModoCRUD { return this.modo; }
   public get Listado(): Array<any> { return this.listado; }
