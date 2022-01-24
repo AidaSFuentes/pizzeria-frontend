@@ -1,18 +1,21 @@
+<div class="detalle-pizza-container">
 <h1>Pizza {{ VM.Elemento?.nombre }}</h1>
 <img
-  class="rounded-circle float-left"
+  class="detalle-pizza"
   src="{{ VM.Elemento?.imgUrl }}"
   alt="Foto de {{ VM.Elemento?.nombre }}"
   width="300"
   height="300"
-/>
-<p>ingredientes: {{ VM.Elemento?.ingredientes }}</p>
-<p>precio: {{ VM.Elemento?.precio }}€</p>
-<div class="row">
-  <input
-    class="btn btn-secondary"
+  />
+
+  <p>Ingredientes: {{ VM.Elemento?.ingredientes }}</p>
+  <p>Precio: {{ VM.Elemento?.precio }}€</p>
+  <div class="row">
+    <input
+    class="boton-detalle-pizza"
     type="button"
     value="Volver"
     (click)="VM.cancel()"
-  />
+    />
+  </div>
 </div>
