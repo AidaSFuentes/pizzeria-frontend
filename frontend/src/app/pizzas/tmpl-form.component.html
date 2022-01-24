@@ -73,21 +73,16 @@
         [errors]="nombre.errors"
       ></app-show-errors-messages>
     </div>
-    <div class="form-group col-md-4">
-      <label class="form-label" for="precio">Precio:</label>
-      <input
-        class="form-control"
-        [class.is-invalid]="VM.Elemento?.invalid"
-        type="number"
-        name="precio"
-        id="precio"
-        required
-      />
-      [(ngModel)]="VM.Elemento.precio" #precio="ngModel" required min="0"
-      required>
+
+      <div class="form-group col-md-4">
+        <label class="form-label" for="precio">Precio:</label>
+        <input class="form-control" [class.is-invalid]="precio.invalid" type="number" name="precio" id="precio"
+          [(ngModel)]="VM.Elemento.precio" #precio="ngModel" required min="0" required>
+        <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages>
+      </div>
       <!-- <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages> -->
     </div>
-  </div>
+
 
   <div class="form-group">
     <input
