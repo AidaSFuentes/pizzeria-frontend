@@ -1,116 +1,62 @@
 <h1>Pizza {{ VM.Elemento?.nombre }}</h1>
 <form #miForm="ngForm">
   <div>
-    <img *ngIf="VM.Elemento?.imgUrl"
-      class="rounded-circle float-left"
-      src="{{ VM.Elemento?.imgUrl }}"
-      alt="Foto de {{ VM.Elemento?.nombre }}"
-      width="300"
-      height="300"
-    />
+    <img *ngIf="VM.Elemento?.imgUrl" class="rounded-circle float-left" src="{{ VM.Elemento?.imgUrl }}"
+      alt="Foto de {{ VM.Elemento?.nombre }}" width="300" height="300" />
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-2">
-      <label class="form-label" for="id">ID:</label>
-      <input
-        class="form-control"
-        [class.is-invalid]="id.invalid && miForm.dirty"
-        type="number"
-        name="id"
-        id="id"
-        [(ngModel)]="VM.Elemento.id"
-        #id="ngModel"
-        min="0"
-        required
-      />
-      <div
-        class="invalid-feedback"
-        [hidden]="!id.hasError('required') || miForm.pristine"
-      >
-
-    </div>
-    <div class="form-group col-md-4">
-      <label class="form-label" for="nombre">Nombre:</label>
-      <input
-        class="form-control"
-        [class.is-invalid]="nombre.invalid"
-        type="text"
-        name="nombre"
-        id="nombre"
-        [(ngModel)]="VM.Elemento.nombre"
-        #nombre="ngModel"
-        required
-        minlength="2"
-        maxlength="50"
-      />
-      <app-show-errors-messages
-        [errors]="nombre.errors"
-      ></app-show-errors-messages>
-    </div>
-    <div class="form-group col-md-4">
-      <label class="form-label" for="ingredientes">Ingredientes:</label>
-      <select
-        name="ingredientes"
-        id="ingredientes"
-        [(ngModel)]="VM.Elemento.ingredientes"
-      >
-        <option value="base">Base</option>
-        <option value="salsa">Salsa</option>
-        <option value="normal">Normal</option>
-        <option value="normal">Tomate</option>
-        <option value="normal">Queso</option>
-        <option value="normal">Ternera</option>
-        <option value="normal">Pollo</option>
-        <option value="normal">Pepperoni</option>
-        <option value="normal">Champiñones</option>
-        <option value="normal">Cebolla</option>
-        <option value="normal">Olivas</option>
-        <option value="normal">Mozarella</option>
-      </select>
-      <app-show-errors-messages
-        [errors]="nombre.errors"
-      ></app-show-errors-messages>
-    </div>
-
-      <div class="form-group col-md-4">
-        <label class="form-label" for="precio">Precio:</label>
-        <input class="form-control" [class.is-invalid]="precio.invalid" type="number" name="precio" id="precio"
-          [(ngModel)]="VM.Elemento.precio" #precio="ngModel" min="0" required>
-        <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages>
-      </div>
-      <!-- <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages> -->
-    </div>
-
-    <div class="form-group col-md-4">
-      <label class="form-label" for="imgUrl">Image URL:</label>
-      <input
-        class="form-control"
-        [class.is-invalid]="imageURL.invalid"
-        type="text"
-        name="imgUrl"
-        id="imgUrl"
-        [(ngModel)]="VM.Elemento.imgUrl"
-        #imageURL="ngModel"
-        required
-      />
-
-    </div>
-
-
-  <div class="form-group">
-    <input
-      type="button"
-      class="btn btn-success"
-      value="Enviar"
-      (click)="VM.send()"
-      [disabled]="miForm.invalid"
-    />
-    <input
-      type="button"
-      class="btn btn-info"
-      value="Volver"
-      (click)="VM.cancel()"
-    />
-  </div>
-  </div>
+  <table>
+    <tbody>
+      <tr>
+        <td><label class="form-label" for="id">ID:</label></td>
+        <td><input class="form-control" [class.is-invalid]="id.invalid && miForm.dirty" type="number" name="id" id="id"
+            [(ngModel)]="VM.Elemento.id" #id="ngModel" min="0" required />
+          <div class="invalid-feedback" [hidden]="!id.hasError('required') || miForm.pristine">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><label class="form-label" for="nombre">Nombre:</label></td>
+        <td><input class="form-control" [class.is-invalid]="nombre.invalid" type="text" name="nombre" id="nombre"
+            [(ngModel)]="VM.Elemento.nombre" #nombre="ngModel" required minlength="2" maxlength="50" />
+          <app-show-errors-messages [errors]="nombre.errors"></app-show-errors-messages>
+        </td>
+      </tr>
+      <tr>
+        <td><label class="form-label" for="ingredientes">Ingredientes:</label></td>
+        <td><select name="ingredientes" id="ingredientes" [(ngModel)]="VM.Elemento.ingredientes">
+            <option value="base">Base</option>
+            <option value="salsa">Salsa</option>
+            <option value="normal">Normal</option>
+            <option value="normal">Tomate</option>
+            <option value="normal">Queso</option>
+            <option value="normal">Ternera</option>
+            <option value="normal">Pollo</option>
+            <option value="normal">Pepperoni</option>
+            <option value="normal">Champiñones</option>
+            <option value="normal">Cebolla</option>
+            <option value="normal">Olivas</option>
+            <option value="normal">Mozarella</option>
+          </select>
+          <app-show-errors-messages [errors]="nombre.errors"></app-show-errors-messages>
+        </td>
+      </tr>
+      <tr>
+        <td><label class="form-label" for="precio">Precio:</label></td>
+        <td><input class="form-control" [class.is-invalid]="precio.invalid" type="number" name="precio" id="precio"
+            [(ngModel)]="VM.Elemento.precio" #precio="ngModel" min="0" required>
+          <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages>
+        </td>
+      </tr>
+      <tr>
+        <td><label class="form-label" for="imgUrl">Image URL:</label></td>
+        <td><input class="form-control" [class.is-invalid]="imageURL.invalid" type="text" name="imgUrl" id="imgUrl"
+            [(ngModel)]="VM.Elemento.imgUrl" #imageURL="ngModel" required /></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="btn btn-success" value="Enviar" (click)="VM.send()"
+            [disabled]="miForm.invalid" /></td>
+        <td><input type="button" class="btn btn-info" value="Volver" (click)="VM.cancel()" /></td>
+      </tr>
+    </tbody>
+  </table>
 </form>
