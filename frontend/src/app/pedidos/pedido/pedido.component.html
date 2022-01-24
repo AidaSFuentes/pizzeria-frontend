@@ -7,9 +7,12 @@
         [(ngModel)]="VM.Elemento.direccion" #direccion="ngModel" required minlength="2" maxlength="100">
       <app-show-errors-messages [errors]="direccion.errors"></app-show-errors-messages>
     </div>
+    <ol>
+      <li *ngFor="let linea of VM.Elemento.lineas">{{linea.idPizza}} Cantidad: {{linea.cantidad}}</li>
+    </ol>
     <div class="form-group col-md-2">
       <label class="form-label" for="telefono">Importe:</label>
-      {{VM.Elemento.Importe}}
+      {{VM.Elemento.importe}}
     </div>
     <div class="form-group col-md-4">
       <label class="form-label" for="estado">Estado:</label>

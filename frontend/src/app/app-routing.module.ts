@@ -6,6 +6,7 @@ import { UsuarioModule } from './usuarios';
 
 const routes: Routes = [
   { path: '', component: CatalogoComponent, pathMatch: 'full' },
+  { path: 'catalogo', component: CatalogoComponent, },
   { path: 'pedido', component: PedidoComponent, },
   { path: 'pedido/:id', component: PedidoComponent, },
   {
