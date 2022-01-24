@@ -80,7 +80,7 @@ export  class PedidosViewModelService {
     });
   }
   public delete(key: any): void {
-    if (!window.confirm('¿Seguro?')) { return; }
+    if (!window.confirm('¿Seguro que quieres eliminar el pedido?')) { return; }
 
     this.dao.remove(key).subscribe({
       next: data => this.list(),
