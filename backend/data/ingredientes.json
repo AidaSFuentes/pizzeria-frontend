@@ -1,1 +1,15 @@
-[{"id":1,"nombre":"base fina","tipo":"base","precio":1.2},{"id":2,"nombre":"base normal","tipo":"base","precio":1},{"id":3,"nombre":"base rellena","tipo":"base","precio":1.5},{"id":4,"nombre":"tomate","tipo":"salsa","precio":1},{"id":5,"nombre":"queso","tipo":"normal","precio":1},{"id":6,"nombre":"ternera","tipo":"normal","precio":2},{"id":7,"nombre":"pollo","tipo":"normal","precio":2},{"id":8,"nombre":"pepperoni","tipo":"normal","precio":1.2},{"id":9,"nombre":"champiñones","tipo":"normal","precio":1.2},{"id":10,"nombre":"cebolla","tipo":"normal","precio":1.2},{"id":11,"nombre":"olivas","tipo":"normal","precio":1.2},{"id":12,"nombre":"mozarella","tipo":"normal","precio":1.2},{"id":13,"nombre":"prueba ingrediente","tipo":"salsa","precio":2}]
+[
+  { "id": 1, "nombre": "base fina", "tipo": "base", "precio": 1.2 },
+  { "id": 2, "nombre": "base normal", "tipo": "base", "precio": 1 },
+  { "id": 3, "nombre": "base rellena", "tipo": "base", "precio": 1.5 },
+  { "id": 4, "nombre": "tomate", "tipo": "salsa", "precio": 1 },
+  { "id": 5, "nombre": "queso", "tipo": "normal", "precio": 1 },
+  { "id": 6, "nombre": "ternera", "tipo": "normal", "precio": 2 },
+  { "id": 7, "nombre": "pollo", "tipo": "normal", "precio": 2 },
+  { "id": 8, "nombre": "pepperoni", "tipo": "normal", "precio": 1.2 },
+  { "id": 9, "nombre": "champiñones", "tipo": "normal", "precio": 1.2 },
+  { "id": 10, "nombre": "cebolla", "tipo": "normal", "precio": 1.2 },
+  { "id": 11, "nombre": "olivas", "tipo": "normal", "precio": 1.2 },
+  { "id": 12, "nombre": "mozarella", "tipo": "normal", "precio": 1.2 },
+  { "id": 13, "nombre": "prueba ingrediente", "tipo": "salsa", "precio": 2 }
+]

@@ -26,20 +26,22 @@ export class IngredientesDAOService extends RESTDAOServiceBase<any, any> {
       context: new HttpContext(),
     });
   }
-
 }
 
 @Injectable({
   providedIn: 'root',
 })
-export class IngredientesViewModelService extends ViewModelServiceBase<any, any> {
+export class IngredientesViewModelService extends ViewModelServiceBase<
+  any,
+  any
+> {
   constructor(
     notify: NotificationService,
     out: LoggerService,
     dao: IngredientesDAOService,
     auth: AuthService,
     router: Router,
-    navigation: NavigationService,
+    navigation: NavigationService
   ) {
     super(notify, out, dao, auth, router, navigation);
   }
@@ -48,4 +50,3 @@ export class IngredientesViewModelService extends ViewModelServiceBase<any, any>
     this.modo = 'add';
   }
 }
-
