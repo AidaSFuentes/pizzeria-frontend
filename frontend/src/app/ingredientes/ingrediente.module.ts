@@ -8,17 +8,19 @@ import {
   IngredientesComponent,
   IngredientesEditComponent,
   IngredientesListComponent,
+  IngredientesViewComponent,
 } from './componente.component';
 import { AuthGuard, SecurityModule } from '../security';
 import { FormsModule } from '@angular/forms';
 import { INGREDIENTES_COMPONENTES } from './componente.component';
+import { CommonComponentsModule } from '../common.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: IngredientesListComponent },
   // { path: '', component: IngredientesComponent},
   { path: 'add', component: IngredientesAddComponent },
   { path: ':id/edit', component: IngredientesEditComponent },
-  //{ path: '/:id', component: IngredientesViewComponent},
+  { path: '/:id', component: IngredientesViewComponent},
 ];
 
 @NgModule({
@@ -29,6 +31,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MyCoreModule,
     CommonServicesModule,
+    CommonComponentsModule,
     SecurityModule,
   ],
 })

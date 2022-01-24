@@ -1,31 +1,27 @@
 <h1>Ingredientes {{ VM.Elemento?.nombre }}</h1>
+
 <form #miForm="ngForm">
-  <p>
-    Código:
-
-    <input type="number" id="id" name="id" min="1" required />
-
-    <br />
-    Nombre:
-    <input
-      type="text"
-      id="nombre"
-      name="nombre"
-      notblank
-      minlength="2"
-      maxlength="30"
-    />
-
-    Debe tener entre 2 y 30 letras
-
-    <br />
-    Tipo:
-    <input type="text" id="tipo" name="tipo" minlength="2" maxlength="10" />
-
-    <br />
-    Precio:
-    <input type="number" id="precio" name="precio" min="0.1" max="5.00" />
-  </p>
+  <div class="form-group col-md-4">
+    <label class="form-label" for="nombre">Nombre:</label>
+    <input class="form-control" [class.is-invalid]="nombre.invalid" type="text" name="nombre" id="nombre"
+      [(ngModel)]="VM.Elemento.nombre" #nombre="ngModel" required minlength="2" maxlength="50">
+    <app-show-errors-messages [errors]="nombre.errors"></app-show-errors-messages>
+  </div>
+  <div class="form-group col-md-4">
+    <label class="form-label" for="nombre">Tipo:</label>
+    <select name="tipo" id="tipo" [(ngModel)]="VM.Elemento.tipo">
+      <option value="base">Base</option>
+      <option value="salsa">Salsa</option>
+      <option value="normal">Normal</option>
+    </select>
+    <app-show-errors-messages [errors]="nombre.errors"></app-show-errors-messages>
+  </div>
+  <div class="form-group col-md-4">
+    <label class="form-label" for="precio">Precio:</label>
+    <input class="form-control" [class.is-invalid]="precio.invalid" type="number" name="precio" id="precio"
+      [(ngModel)]="VM.Elemento.precio" #precio="ngModel" required min="0" required>
+    <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages>
+  </div>
 
   <div class="form-group">
     <input

@@ -78,6 +78,35 @@ export class IngredientesEditComponent implements OnInit, OnDestroy {
     this.obs$.unsubscribe();
   }
 }
+@Component({
+  selector: 'app-ingredientes-view',
+  templateUrl: './tmpl-view.component.html',
+  styleUrls: ['./componente.component.css'],
+})
+export class IngredientesViewComponent implements OnInit, OnDestroy {
+  private obs$: any;
+  constructor(
+    protected vm: IngredientesViewModelService,
+    protected route: ActivatedRoute,
+    protected router: Router
+  ) {}
+  public get VM(): IngredientesViewModelService {
+    return this.vm;
+  }
+  ngOnInit(): void {
+    this.obs$ = this.route.paramMap.subscribe((params: ParamMap) => {
+      const id = parseInt(params?.get('id') ?? '');
+      if (id) {
+        this.vm.view(id);
+      } else {
+        this.router.navigate(['/404.html']);
+      }
+    });
+  }
+  ngOnDestroy(): void {
+    this.obs$.unsubscribe();
+  }
+}
 //  @Component({
 //   selector: 'app-ingredientes-view',
 //   templateUrl: './tmpl-view.component.html',
@@ -95,4 +124,5 @@ export const INGREDIENTES_COMPONENTES = [
   IngredientesAddComponent,
   IngredientesEditComponent,
   IngredientesListComponent,
+  IngredientesViewComponent,
 ];

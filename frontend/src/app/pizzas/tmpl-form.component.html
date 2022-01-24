@@ -1,31 +1,93 @@
 <h1>Pizzas {{ VM.Elemento?.nombre }}</h1>
 <form #miForm="ngForm">
-  <p>
-    Código:
-
-    <input type="number" id="id" name="id" min="1" required />
-
-    <br />
-    Nombre:
-    <input
-      type="text"
-      id="nombre"
-      name="nombre"
-      notblank
-      minlength="2"
-      maxlength="30"
+  <div>
+    <img
+      class="rounded-circle float-left"
+      src="{{ VM.Elemento?.imgUrl }}"
+      alt="Foto de {{ VM.Elemento?.nombre }}"
+      width="300"
+      height="300"
     />
-
-    Debe tener entre 2 y 30 letras
-
-    <br />
-    Ingredientes:
-    <input type="text" id="tipo" name="tipo" minlength="2" />
-
-    <br />
-    Precio:
-    <input type="number" id="precio" name="precio" min="5" />
-  </p>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label class="form-label" for="id">Código:</label>
+      <input
+        class="form-control"
+        [class.is-invalid]="id.invalid && miForm.dirty"
+        type="number"
+        name="id"
+        id="id"
+        [(ngModel)]="VM.Elemento.id"
+        #id="ngModel"
+        required
+        min="0"
+        required
+      />
+      <div
+        class="invalid-feedback"
+        [hidden]="!id.hasError('required') || miForm.pristine"
+      >
+        Es obligatorio
+      </div>
+    </div>
+    <div class="form-group col-md-4">
+      <label class="form-label" for="nombre">Nombre:</label>
+      <input
+        class="form-control"
+        [class.is-invalid]="nombre.invalid"
+        type="text"
+        name="nombre"
+        id="nombre"
+        [(ngModel)]="VM.Elemento.nombre"
+        #nombre="ngModel"
+        required
+        minlength="2"
+        maxlength="50"
+      />
+      <app-show-errors-messages
+        [errors]="nombre.errors"
+      ></app-show-errors-messages>
+    </div>
+    <div class="form-group col-md-4">
+      <label class="form-label" for="ingredientes">Ingredientes:</label>
+      <select
+        name="ingredientes"
+        id="ingredientes"
+        [(ngModel)]="VM.Elemento.ingredientes"
+      >
+        <option value="base">Base</option>
+        <option value="salsa">Salsa</option>
+        <option value="normal">Normal</option>
+        <option value="normal">Tomate</option>
+        <option value="normal">Queso</option>
+        <option value="normal">Ternera</option>
+        <option value="normal">Pollo</option>
+        <option value="normal">Pepperoni</option>
+        <option value="normal">Champiñones</option>
+        <option value="normal">Cebolla</option>
+        <option value="normal">Olivas</option>
+        <option value="normal">Mozarella</option>
+      </select>
+      <app-show-errors-messages
+        [errors]="nombre.errors"
+      ></app-show-errors-messages>
+    </div>
+    <div class="form-group col-md-4">
+      <label class="form-label" for="precio">Precio:</label>
+      <input
+        class="form-control"
+        [class.is-invalid]="VM.Elemento?.invalid"
+        type="number"
+        name="precio"
+        id="precio"
+        required
+      />
+      [(ngModel)]="VM.Elemento.precio" #precio="ngModel" required min="0"
+      required>
+      <!-- <app-show-errors-messages [errors]="precio.errors"></app-show-errors-messages> -->
+    </div>
+  </div>
 
   <div class="form-group">
     <input
