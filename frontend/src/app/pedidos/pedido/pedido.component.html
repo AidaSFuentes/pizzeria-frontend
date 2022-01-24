@@ -1,8 +1,24 @@
-<!--
-  <ng-container [ngSwitch]="VM.Modo" >
-  <app-pedido-add *ngSwitchCase="'add'"></app-pedido-add>
-  <app-pedido-list *ngSwitchDefault></app-pedido-list>
-</ng-container>
+<h1>Pedido</h1>
+<form #miForm="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label class="form-label" for="nombre">Direccion:</label>
+      <input class="form-control" [class.is-invalid]="direccion.invalid" type="text" name="direccion" id="direccion"
+        [(ngModel)]="VM.Elemento.direccion" #direccion="ngModel" required minlength="2" maxlength="100">
+      <app-show-errors-messages [errors]="direccion.errors"></app-show-errors-messages>
+    </div>
+    <div class="form-group col-md-2">
+      <label class="form-label" for="telefono">Importe:</label>
+      {{VM.Elemento.Importe}}
+    </div>
+    <div class="form-group col-md-4">
+      <label class="form-label" for="estado">Estado:</label>
+    {{VM.Elemento.estado}}
+    </div>
 
- -->
-
+  </div>
+   <div class="form-group">
+    <input type="button" class="btn btn-success" value="Enviar" (click)="VM.send()" [disabled]="miForm.invalid">
+    <input type="button" class="btn btn-info" value="Volver" (click)="VM.cancel()">
+  </div>
+</form>

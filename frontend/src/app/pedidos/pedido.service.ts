@@ -53,7 +53,7 @@ export  class PedidosViewModelService {
   }
 
   public add(): void {
-    this.elemento =    {"id": 0, "direccion": "", "importe": 0 ,"estado": "solicitada", "lineas": []};
+    this.elemento = {"id": 0, "direccion": "", "importe": 0 ,"estado": "solicitada", "lineas": []};
     this.carrito.Listado.forEach(item => {
     this.elemento.lineas.push({"idPizza": item.IdPizza, "cantidad": item.Cantidad});
     this.elemento.importe+=item.Total;
