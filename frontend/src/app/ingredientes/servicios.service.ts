@@ -26,6 +26,7 @@ export class IngredientesDAOService extends RESTDAOServiceBase<any, any> {
       context: new HttpContext(),
     });
   }
+
 }
 
 @Injectable({
@@ -41,6 +42,10 @@ export class IngredientesViewModelService extends ViewModelServiceBase<any, any>
     navigation: NavigationService,
   ) {
     super(notify, out, dao, auth, router, navigation);
+  }
+  public override add(): void {
+    this.elemento = { id: 0 };
+    this.modo = 'add';
   }
 }
 

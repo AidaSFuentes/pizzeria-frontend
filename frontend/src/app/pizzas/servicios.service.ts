@@ -44,4 +44,8 @@ export class PizzasViewModelService extends ViewModelServiceBase<any, any> {
   ) {
     super(notify, out, dao, auth, router, navigation);
   }
+  public override add(): void {
+    this.elemento = { id: 0 };
+    this.modo = 'add';
+  }
 }
